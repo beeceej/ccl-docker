@@ -6,12 +6,18 @@ This Dockerfile allows access to the clozure common lisp tool (ccl64)
 
 `$ docker build -t ccl:1.11.5 .`
 
-`$ docker run -it ccl:1.11.5` <- Will drop you into a lisp interpreter session
+### Lisp Interpreter Session
+
+`$ docker run -it ccl:1.11.5` <- Will drop you into a LISP interpreter session
+
+to quit you may enter `(quit)`
+
+### Shell Session with CCL installed
 
 `$ docker run -it --entrypoint /bin/sh ccl:1.11.5` <- Will drop you into a shell session with ccl installed
 
-While in the docker image you may
+`$ /ccl64` <- will drop you into the lisp interpreter session
 
-`$ cd /usr/local/src/ccl/scripts`
+### Run a LISP program in the container
 
-`$ ./ccl64` <- will drop you into the lisp interpreter session
+`$ docker run -it -v ${PWD}:${PWD} -w ${PWD} ccl:1.11.5 --load ${PWD}/main.cl --eval '(ccl:quit)' -- $argv`
