@@ -2,6 +2,8 @@
 
 This Dockerfile allows access to the clozure common lisp tool (ccl64)
 
+[Docker Hub (https://hub.docker.com/r/beeceej/ccl/)](https://hub.docker.com/r/beeceej/ccl/)
+
 ## Usage
 
 `$ docker build -t ccl:1.11.5 .`
