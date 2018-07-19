@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 
+LABEL maintainer="beeceej.code@gmail.com"
 
 RUN apt-get -q update  \
     && apt-get -y -q install wget \
