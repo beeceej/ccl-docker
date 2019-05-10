@@ -1,3 +1,6 @@
+# Attention
+you probably want this image. https://github.com/daewok/lisp-devel-docker that is all.
+
 # ccl-docker
 
 This Dockerfile allows access to the clozure common lisp tool (ccl64)
